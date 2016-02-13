@@ -1,0 +1,172 @@
+@import "bourbon"
+@import "vars.sass"
+
+$main-color: #F39F18
+$headers-color: #2E3D4D
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: em(22px)
+	font-family: "RalewayRegular", sans-serif
+	overflow-x: hidden
+	background-color: #fff
+
+.hidden
+	display: none
+
+.main_head
+	min-height: 620px
+	background-size: cover
+	background-position: center
+	position: relative
+	padding-bottom: 140px
+	&::before
+		@extend .before
+		background-color: #536273
+		opacity: .85
+.top_mnu
+	min-height: 160px
+	padding-top: 45px
+	img
+		height: 45px
+	ul
+		@extend .ulli
+		li
+			display: inline-block
+			padding: 0 10px
+			line-height: 40px
+			a
+				font-size: em(14px)
+				color: #fff
+			a:hover, a.active
+				color: $main-color
+				text-decoration: underline
+	.number
+		font-family: "RobotoBold" , $helvetica
+		font-size: em(18px)
+		line-height: 40px
+		color: #fff
+		
+	.toggle
+		display: inline-block
+		position: absolute 
+		top: 0
+		right: 0
+		width: 28px
+		height: 30px
+		margin: 20px 10px
+
+
+.toggle span:after,
+.toggle span:before 
+  content: ""
+  position: absolute
+  left: 0
+  top: -9px
+
+.toggle span:after
+  top: 9px
+
+.toggle span 
+  position: relative
+  display: block
+
+
+.toggle span,
+.toggle span:after,
+.toggle span:before 
+  width: 100%
+  height: 5px
+  background-color: #fff
+  transition: all 0.3s
+  backface-visibility: hidden
+  border-radius: 2px
+
+
+/* on activation */
+.toggle.on span 
+  background-color: transparent
+
+.toggle.on span:before 
+  transform: rotate(45deg) translate(5px, 5px)
+
+.toggle.on span:after 
+  transform: rotate(-45deg) translate(7px, -8px)
+
+.toggle.on + #menu 
+  opacity: 1
+  visibility: visible
+
+.right
+	margin-top: 20px
+
+.header_wrap
+	margin-top: 50px
+	margin-bottom: 40px
+	h1
+		display: inline-block
+		margin-top: 120px
+		color: #fff
+		border-bottom: solid 8px $main-color
+		padding-bottom: 10px
+	ul
+		margin-top: 15px
+		@extend .ulli
+		a
+			color: #fff
+			font-family: "RalewaySemiBold", $helvetica
+		li
+			display: block
+			line-height: 32px
+			&::before
+				content: " "
+				display: inline-block
+				width: 11px
+				height: 12px
+				padding-right: 5px
+				+triangle(12px 11px, $main-color, right)
+	.forms
+		padding: 20px 40px
+		opacity: .8
+		background-color: #233243
+		box-shadow: 0 4px 0 rgba(0,0,0,.6)
+		h4
+			color: #fff
+			font-family: "PFCentroSlabProMedium"
+			font-size: em(28px)
+		p
+			color: #828F9D
+			font-size: em(14px)
+			margin-top: 15px
+		span
+			display: block
+			color: #768290
+			font-family: "Raleway"
+			font-size: em(13px)
+		input
+			display: block
+			width: 100%
+			min-height: 40px
+			padding: 5px
+			background-color: #33465a
+			box-shadow: inset 0 3px 0 rgba(0,0,0,.4)
+			border: none
+			color: #fff
+		.button_wrap
+			text-align: center
+			button
+				padding: 15px 30px
+				margin-top: 15px
+				background-color: #f39f17
+				box-shadow: 0 3px 0 #b97200
+				color: #111
+				font-family: "PFCentroSlabProBold"
+				font-size: 20px
+				&:hover
+					background-color: #a76b0b
+.forms label
+	display: block
+
+

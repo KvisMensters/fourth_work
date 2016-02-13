@@ -1,0 +1,256 @@
+@import "bourbon"
+@import "vars.sass"
+
+
+.bg_silver
+	background-color: #e5e5e5
+
+.bg_dark
+	background-color: #2b3949
+
+.bg_light
+	background-color: #f9f9f9
+
+
+
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+//Custom Styles Here
+.home_sect
+	position: relative
+	padding-top: 80px
+	h2
+		color: #2c3949
+		text-align: center
+		font-family: "PFCentroSlabProMedium"
+		position: relative
+		&::after
+			content: " "
+			position: absolute
+			height: 3px
+			width: 165px
+			left: 50%
+			bottom: -30px
+			transform: translate(-50%, 0)
+			background-color: $main-color
+	p
+		margin-top: 50px
+		font-size: em(15px)
+		color: #333
+		font-family: "RalewayRegular"
+	.bottom_sect
+		padding: 50px 0
+		.button_wrap
+			text-align: center
+
+	&::before
+		@extend .bach
+		background-image: url(/img/bach_1.png)
+
+	.section_content
+		min-height: 548px
+		background: url(/img/s1_gray_bg.png) no-repeat bottom
+		position: relative
+		padding-bottom: 90px
+		.s1_bottom_triangle
+			position: absolute
+			width: 100%
+			height: 90px
+			bottom: 0
+			background-image: url(/img/s1_triangle.svg)
+			background-size: 100% 100%			
+			text-align: center
+			.logotip
+				position: absolute
+				display: inline-block
+				top: -130px
+				left: 50%
+				transform: translate(-50%, 0)
+			.logotip_2
+				position: absolute
+				left: 50%
+				top: 30px
+				opacity: .6
+				transform: translate(-50%, 0)
+				height: 55px
+				width: 115px
+	.s1_bottom
+		padding-top: 15px
+		padding-bottom: 60px
+		background-color: #394b5f
+		.info_item
+			p
+				color: #E1E4E7
+	.info_item
+		display: inline-block
+		padding-left: 34px
+		max-width: 264px
+		text-align: left
+		p
+			margin-top: 0
+			padding-bottom: 20px
+			border-bottom: solid 1px #E1E4E7 
+	.flip_top
+		margin-top: 57px
+
+.section_2
+	p
+		text-align: center
+	.wrapper
+		display: inline-block
+	.item_wrap
+		padding: 15px
+		img
+			max-width: 80px
+			height: 80px
+			position: relative
+		a::after
+			content: " "
+			position: absolute
+			height: 2px
+			width: 60px
+			left: 50%
+			top: 110px
+			transform: translate(-50%, 0)
+			background-color: $main-color
+		p
+			color: #111
+			font-family: "RalewayBold"
+			font-size: em(13px)
+			text-decoration: underline
+		.default
+			margin: 0
+			padding: 0
+			a::after
+				top: 95px
+
+	.item_container
+		margin-bottom: 20px
+
+.section_3	
+	&::before
+		@extend .bach
+		background-image: url(/img/bah_3.png)
+
+	.img_wrapper
+		display: inline-block
+		width: 115px
+		height: 115px
+		padding: 18px 18px
+		background-color: $main-color
+		border-radius: 50%
+		img
+			width: 75px
+			height: 45px
+			margin-top: 15px
+	.item_wrapper
+		background-color: $bg_dark
+		border: 5px solid $bg_silver
+		padding: 65px 30px
+		p
+			margin: 0
+			color: #97a3b1
+		h5
+			color: #e5e5e5
+			font-family: "RalewayBold"
+			font-size: em(16px)
+	.items_container
+		margin: 65px 0
+
+.section_4
+	&::before
+		@extend .bach
+		background-image: url(/img/bah_2.png)
+
+.section_5
+	.descr
+		margin: 0
+		color: #333
+		font-family: "RalewayRegular"
+		font-size: em(15px)
+	.img_wrapper
+		display: inline-block
+		width: 115px
+		height: 115px
+		border-radius: 50%
+		img
+			width: 100%
+			height: 100%
+			border-radius: 50%
+			border: 4px solid $silverrer
+	.item_wrapper
+		background-color: $bg_silver
+		border: 5px solid $bg_light
+		padding: 65px 30px
+		p
+			margin: 0
+			color: #97a3b1
+		h5
+			color: #333
+			font-family: "RalewayBold"
+			font-size: em(16px)
+		.phone
+			margin-top: 15px
+			color: #333
+			font-family: "RobotoBold"
+			font-size: em(16px)
+
+	.items_container
+		margin: 65px 0
+
+.section_6
+	&::before
+		@extend .bach
+		background-image: url(/img/bah_3.png)
+
+	.bx-wrapper
+		padding: 25px 0
+		.bx-viewport
+			box-shadow: none
+			border: none
+
+.bxslider
+	padding: 0
+	text-align: center
+	background-color: $bg_silver
+	height: 400px
+	p
+		margin: 0
+	.img_wrapper
+		display: inline-block
+		width: 115px
+		height: 115px
+		border-radius: 50%
+		img
+			width: 100%
+			height: 100%
+			border-radius: 50%
+			border: 4px solid $main-color
+
+//ALWAYS END
+@import "media.sass"
+
+//Load Libs SASS
+@import "app/libs/animate/animate.sass"

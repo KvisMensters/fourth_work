@@ -1,0 +1,69 @@
+@import "bourbon"
+$bg_dark: #2b3949
+$bg_light: #fff
+$bg_silver: #e5e5e5
+$silverrer: #d6d6d6
+$main-color: #F39F18
+$headers-color: #2E3D4D
+
+a,a:hover,a:focus
+	color: $main-color
+	
+.headers 
+	font-family: "PFCentroSlabProMedium" , $helvetica
+	text-transform: uppercase
+	font-weight: normal
+	color: $headers-color
+
+h1, h2, h3, h4, h5, h6 
+	@extend .headers
+
+h1
+	font-size: em(48px)
+	text-transform: none
+
+h2
+	font-size: em(30px)
+
+h3
+	font-size: em(24px)
+	
+.before 
+	content: ''
+	width: 100%
+	height: 100%
+	position: absolute
+	top: 0
+	left: 0
+
+.ulli
+	list-style-type: none
+	margin: 0
+	padding: 0
+
+.buttons
+	display: inline-block
+	border: none
+
+button
+	padding: 15px 30px
+	background-color: #f39f17
+	box-shadow: 0 3px 0 #b97200
+	color: #111
+	font-family: "PFCentroSlabProBold"
+	font-size: 20px
+	&:hover
+		background-color: #a76b0b
+
+.bach
+	content: " "
+	height: 6px
+	width: 100%
+	position: absolute
+	top: -6px
+
+.centered
+	text-align: center
+
+.botsilver
+	background-color: #d6d6d6
